@@ -1,0 +1,24 @@
+[gd_scene load_steps=6 format=3 uid="uid://bsn1j6j4vso2l"]
+
+[ext_resource type="Script" path="res://character.gd" id="1_c8vep"]
+[ext_resource type="Texture2D" uid="uid://co0uuhwylnwkf" path="res://benito.jpg" id="2_kj0h2"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_u0yi5"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_iqymn"]
+albedo_texture = ExtResource("2_kj0h2")
+uv1_scale = Vector3(3, 2, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_evaxt"]
+material = SubResource("StandardMaterial3D_iqymn")
+
+[node name="character" type="CharacterBody3D"]
+script = ExtResource("1_c8vep")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0.5, 0)
+shape = SubResource("BoxShape3D_u0yi5")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0.5, 0)
+mesh = SubResource("BoxMesh_evaxt")

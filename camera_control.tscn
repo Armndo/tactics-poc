@@ -1,0 +1,22 @@
+[gd_scene load_steps=5 format=3 uid="uid://dvvx2c5r1u6ol"]
+
+[ext_resource type="Script" path="res://camera_control.gd" id="1_61a6x"]
+[ext_resource type="PackedScene" uid="uid://1pe0hldomqsy" path="res://camera.tscn" id="1_nx0i3"]
+[ext_resource type="Script" path="res://camera.gd" id="3_sut3p"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_hpnet"]
+size = Vector3(0.1, 0.1, 0.1)
+
+[node name="cameraControl" type="CharacterBody3D"]
+script = ExtResource("1_61a6x")
+
+[node name="pivot" type="Node3D" parent="."]
+
+[node name="camera" parent="pivot" instance=ExtResource("1_nx0i3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 20)
+projection = 1
+size = 5.0
+script = ExtResource("3_sut3p")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("BoxShape3D_hpnet")
