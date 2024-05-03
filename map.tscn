@@ -1,23 +1,10 @@
-[gd_scene load_steps=9 format=3 uid="uid://db2xqnew1l6q5"]
+[gd_scene load_steps=4 format=3 uid="uid://bvrn17u43f7av"]
 
-[ext_resource type="PackedScene" uid="uid://bsn1j6j4vso2l" path="res://character.tscn" id="1_ap1qx"]
-[ext_resource type="Texture2D" uid="uid://co0uuhwylnwkf" path="res://benito.jpg" id="2_8tbto"]
-[ext_resource type="PackedScene" uid="uid://dvvx2c5r1u6ol" path="res://camera_control.tscn" id="2_cimrh"]
-[ext_resource type="Script" path="res://geometry.gd" id="4_fiyty"]
+[ext_resource type="Script" path="res://geometry.gd" id="1_iyvi6"]
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_15e7h"]
-margin = 0.0
-size = Vector3(4, 0.1, 4)
+[sub_resource type="ArrayMesh" id="ArrayMesh_6er6w"]
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kylyh"]
-albedo_texture = ExtResource("2_8tbto")
-uv1_scale = Vector3(3, 2, 1)
-
-[sub_resource type="BoxMesh" id="BoxMesh_12qn8"]
-material = SubResource("StandardMaterial3D_kylyh")
-size = Vector3(4, 0.1, 4)
-
-[sub_resource type="ArrayMesh" id="ArrayMesh_mpv7f"]
+[sub_resource type="ArrayMesh" id="ArrayMesh_uqi6w"]
 _surfaces = [{
 "aabb": AABB(0, 0, 0, 3, 3, 3),
 "format": 34359742465,
@@ -29,28 +16,15 @@ _surfaces = [{
 "vertex_data": PackedByteArray(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 128, 63, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 64, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 64, 64, 0, 0, 128, 63, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 128, 63, 0, 0, 0, 0, 0, 0, 128, 63, 0, 0, 128, 63, 0, 0, 0, 0, 0, 0, 0, 64, 0, 0, 128, 63, 0, 0, 0, 0, 0, 0, 64, 64, 0, 0, 0, 64, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 64, 0, 0, 0, 0, 0, 0, 128, 63, 0, 0, 0, 64, 0, 0, 0, 0, 0, 0, 0, 64, 0, 0, 0, 64, 0, 0, 0, 0, 0, 0, 64, 64, 0, 0, 64, 64, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 64, 64, 0, 0, 0, 0, 0, 0, 128, 63, 0, 0, 64, 64, 0, 0, 0, 0, 0, 0, 0, 64, 0, 0, 64, 64, 0, 0, 0, 0, 0, 0, 64, 64, 0, 0, 0, 0, 0, 0, 128, 63, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 128, 63, 0, 0, 128, 63, 0, 0, 0, 0, 0, 0, 128, 63, 0, 0, 0, 64, 0, 0, 0, 0, 0, 0, 128, 63, 0, 0, 64, 64, 0, 0, 128, 63, 0, 0, 128, 63, 0, 0, 0, 0, 0, 0, 128, 63, 0, 0, 128, 63, 0, 0, 128, 63, 0, 0, 128, 63, 0, 0, 128, 63, 0, 0, 0, 64, 0, 0, 128, 63, 0, 0, 128, 63, 0, 0, 64, 64, 0, 0, 0, 64, 0, 0, 128, 63, 0, 0, 0, 0, 0, 0, 0, 64, 0, 0, 128, 63, 0, 0, 128, 63, 0, 0, 0, 64, 0, 0, 128, 63, 0, 0, 0, 64, 0, 0, 0, 64, 0, 0, 128, 63, 0, 0, 64, 64, 0, 0, 64, 64, 0, 0, 128, 63, 0, 0, 0, 0, 0, 0, 64, 64, 0, 0, 128, 63, 0, 0, 128, 63, 0, 0, 64, 64, 0, 0, 128, 63, 0, 0, 0, 64, 0, 0, 64, 64, 0, 0, 128, 63, 0, 0, 64, 64, 0, 0, 0, 0, 0, 0, 0, 64, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 64, 0, 0, 128, 63, 0, 0, 0, 0, 0, 0, 0, 64, 0, 0, 0, 64, 0, 0, 0, 0, 0, 0, 0, 64, 0, 0, 64, 64, 0, 0, 128, 63, 0, 0, 0, 64, 0, 0, 0, 0, 0, 0, 128, 63, 0, 0, 0, 64, 0, 0, 128, 63, 0, 0, 128, 63, 0, 0, 0, 64, 0, 0, 0, 64, 0, 0, 128, 63, 0, 0, 0, 64, 0, 0, 64, 64, 0, 0, 0, 64, 0, 0, 0, 64, 0, 0, 0, 0, 0, 0, 0, 64, 0, 0, 0, 64, 0, 0, 128, 63, 0, 0, 0, 64, 0, 0, 0, 64, 0, 0, 0, 64, 0, 0, 0, 64, 0, 0, 0, 64, 0, 0, 64, 64, 0, 0, 64, 64, 0, 0, 0, 64, 0, 0, 0, 0, 0, 0, 64, 64, 0, 0, 0, 64, 0, 0, 128, 63, 0, 0, 64, 64, 0, 0, 0, 64, 0, 0, 0, 64, 0, 0, 64, 64, 0, 0, 0, 64, 0, 0, 64, 64, 0, 0, 0, 0, 0, 0, 64, 64, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 64, 64, 0, 0, 128, 63, 0, 0, 0, 0, 0, 0, 64, 64, 0, 0, 0, 64, 0, 0, 0, 0, 0, 0, 64, 64, 0, 0, 64, 64, 0, 0, 128, 63, 0, 0, 64, 64, 0, 0, 0, 0, 0, 0, 128, 63, 0, 0, 64, 64, 0, 0, 128, 63, 0, 0, 128, 63, 0, 0, 64, 64, 0, 0, 0, 64, 0, 0, 128, 63, 0, 0, 64, 64, 0, 0, 64, 64, 0, 0, 0, 64, 0, 0, 64, 64, 0, 0, 0, 0, 0, 0, 0, 64, 0, 0, 64, 64, 0, 0, 128, 63, 0, 0, 0, 64, 0, 0, 64, 64, 0, 0, 0, 64, 0, 0, 0, 64, 0, 0, 64, 64, 0, 0, 64, 64, 0, 0, 64, 64, 0, 0, 64, 64, 0, 0, 0, 0, 0, 0, 64, 64, 0, 0, 64, 64, 0, 0, 128, 63, 0, 0, 64, 64, 0, 0, 64, 64, 0, 0, 0, 64, 0, 0, 64, 64, 0, 0, 64, 64, 0, 0, 64, 64)
 }]
 
-[node name="scene" type="Node3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.392262, 0.448299, 0)
+[node name="map" type="Node3D"]
 
-[node name="character" parent="." instance=ExtResource("1_ap1qx")]
+[node name="bounds" type="StaticBody3D" parent="."]
 
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, -0.866025, 0.5, 0, -0.5, -0.866025, 0, 2, -4)
+[node name="tiles" type="Node3D" parent="."]
 
-[node name="piso" type="StaticBody3D" parent="."]
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="piso"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.05, 0)
-shape = SubResource("BoxShape3D_15e7h")
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="piso"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.05, 0)
-mesh = SubResource("BoxMesh_12qn8")
-skeleton = NodePath("../..")
-
-[node name="cameraControl" parent="." instance=ExtResource("2_cimrh")]
+[node name="tile0" type="MeshInstance3D" parent="tiles"]
+mesh = SubResource("ArrayMesh_6er6w")
 
 [node name="geometry" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 2, 2)
-mesh = SubResource("ArrayMesh_mpv7f")
-script = ExtResource("4_fiyty")
+mesh = SubResource("ArrayMesh_uqi6w")
+script = ExtResource("1_iyvi6")
