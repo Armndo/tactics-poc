@@ -1,7 +1,8 @@
-[gd_scene load_steps=9 format=3 uid="uid://db2xqnew1l6q5"]
+[gd_scene load_steps=10 format=3 uid="uid://db2xqnew1l6q5"]
 
+[ext_resource type="Script" path="res://scene.gd" id="1_5qc05"]
 [ext_resource type="PackedScene" uid="uid://bsn1j6j4vso2l" path="res://character.tscn" id="1_ap1qx"]
-[ext_resource type="Texture2D" uid="uid://co0uuhwylnwkf" path="res://benito.jpg" id="2_8tbto"]
+[ext_resource type="Texture2D" uid="uid://bjxmvxgqtx1ow" path="res://to-assets/cobblestone.png" id="2_5jw0x"]
 [ext_resource type="PackedScene" uid="uid://dvvx2c5r1u6ol" path="res://camera_control.tscn" id="2_cimrh"]
 [ext_resource type="Script" path="res://geometry.gd" id="4_fiyty"]
 
@@ -10,14 +11,14 @@ margin = 0.0
 size = Vector3(4, 0.1, 4)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kylyh"]
-albedo_texture = ExtResource("2_8tbto")
-uv1_scale = Vector3(3, 2, 1)
+albedo_texture = ExtResource("2_5jw0x")
+uv1_scale = Vector3(32, 16, 8)
 
 [sub_resource type="BoxMesh" id="BoxMesh_12qn8"]
 material = SubResource("StandardMaterial3D_kylyh")
 size = Vector3(4, 0.1, 4)
 
-[sub_resource type="ArrayMesh" id="ArrayMesh_mpv7f"]
+[sub_resource type="ArrayMesh" id="ArrayMesh_t6nmm"]
 _surfaces = [{
 "aabb": AABB(0, 0, 0, 3, 3, 3),
 "format": 34359742465,
@@ -31,6 +32,7 @@ _surfaces = [{
 
 [node name="scene" type="Node3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.392262, 0.448299, 0)
+script = ExtResource("1_5qc05")
 
 [node name="character" parent="." instance=ExtResource("1_ap1qx")]
 
@@ -52,5 +54,6 @@ skeleton = NodePath("../..")
 
 [node name="geometry" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 2, 2)
-mesh = SubResource("ArrayMesh_mpv7f")
+visible = false
+mesh = SubResource("ArrayMesh_t6nmm")
 script = ExtResource("4_fiyty")

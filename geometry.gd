@@ -2,6 +2,7 @@
 extends MeshInstance3D
 
 func _ready():
+	return
 	#
 	#var mesh_data = []
 	var mesh_arr = ArrayMesh.new()
