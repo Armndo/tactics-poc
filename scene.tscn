@@ -2,8 +2,8 @@
 
 [ext_resource type="Script" path="res://scene.gd" id="1_5qc05"]
 [ext_resource type="PackedScene" uid="uid://bsn1j6j4vso2l" path="res://character.tscn" id="1_ap1qx"]
-[ext_resource type="Texture2D" uid="uid://bjxmvxgqtx1ow" path="res://to-assets/cobblestone.png" id="2_5jw0x"]
 [ext_resource type="PackedScene" uid="uid://dvvx2c5r1u6ol" path="res://camera_control.tscn" id="2_cimrh"]
+[ext_resource type="Texture2D" uid="uid://wldek25dv62b" path="res://assets/tiles/cobble.png" id="3_l75lw"]
 [ext_resource type="Script" path="res://geometry.gd" id="4_fiyty"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_15e7h"]
@@ -11,7 +11,7 @@ margin = 0.0
 size = Vector3(4, 0.1, 4)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kylyh"]
-albedo_texture = ExtResource("2_5jw0x")
+albedo_texture = ExtResource("3_l75lw")
 uv1_scale = Vector3(32, 16, 8)
 
 [sub_resource type="BoxMesh" id="BoxMesh_12qn8"]
@@ -37,7 +37,7 @@ script = ExtResource("1_5qc05")
 [node name="character" parent="." instance=ExtResource("1_ap1qx")]
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, -0.866025, 0.5, 0, -0.5, -0.866025, 0, 2, -4)
+transform = Transform3D(-4.37114e-08, -0.5, 0.866025, 0, 0.866025, 0.5, -1, 2.18557e-08, -3.78552e-08, 4, 2, 0)
 
 [node name="piso" type="StaticBody3D" parent="."]
 

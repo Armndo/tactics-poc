@@ -10,8 +10,9 @@ export_presets.cfg
 *.tmp
 
 # non-sharable assets
-to-assets/
-assets/textures
+#to-assets/
+#assets/textures
+build/
 *.pdn
 
 # Imported translations (automatically generated from CSV files)

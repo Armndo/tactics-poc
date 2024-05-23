@@ -1,12 +1,12 @@
 [gd_scene load_steps=6 format=3 uid="uid://bsn1j6j4vso2l"]
 
 [ext_resource type="Script" path="res://character.gd" id="1_c8vep"]
-[ext_resource type="Texture2D" uid="uid://co0uuhwylnwkf" path="res://benito.jpg" id="2_kj0h2"]
+[ext_resource type="Texture2D" uid="uid://cix4jyjjkjf13" path="res://assets/textures/placeholder.png" id="2_c5f7t"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_u0yi5"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_iqymn"]
-albedo_texture = ExtResource("2_kj0h2")
+albedo_texture = ExtResource("2_c5f7t")
 uv1_scale = Vector3(3, 2, 1)
 
 [sub_resource type="BoxMesh" id="BoxMesh_evaxt"]

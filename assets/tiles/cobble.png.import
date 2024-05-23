@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c26l70u0cpdx8"
-path.s3tc="res://.godot/imported/arrow2.png-3626733b40fe00bee766d5be8f858db4.s3tc.ctex"
+uid="uid://wldek25dv62b"
+path.s3tc="res://.godot/imported/cobble.png-d51a398524b632ef99ece119c172182f.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://arrow2.png"
-dest_files=["res://.godot/imported/arrow2.png-3626733b40fe00bee766d5be8f858db4.s3tc.ctex"]
+source_file="res://assets/tiles/cobble.png"
+dest_files=["res://.godot/imported/cobble.png-d51a398524b632ef99ece119c172182f.s3tc.ctex"]
 
 [params]
 

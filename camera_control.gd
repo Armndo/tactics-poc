@@ -7,11 +7,12 @@ const ZOOM_SPEED = 7.5
 const DEFAULT_POS = 0
 const DEFAULT_X_ROT = -30
 const DEFAULT_Y_ROT = 45
-const DEFAULT_ZOOM = 2.5
+const DEFAULT_ZOOM = 3.0
+
 
 const CHANGE_X_ROT = 50
 const CHANGE_Y_ROT = 45
-const CHANGE_ZOOM = 1.5
+const CHANGE_ZOOM = 1
 
 var pos = DEFAULT_POS
 var x_rot = DEFAULT_X_ROT
