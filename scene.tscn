@@ -1,10 +1,10 @@
-[gd_scene load_steps=10 format=3 uid="uid://db2xqnew1l6q5"]
+[gd_scene load_steps=10 format=4 uid="uid://db2xqnew1l6q5"]
 
-[ext_resource type="Script" path="res://scene.gd" id="1_5qc05"]
+[ext_resource type="Script" uid="uid://cbnd7rr38ngp4" path="res://scene.gd" id="1_5qc05"]
 [ext_resource type="PackedScene" uid="uid://bsn1j6j4vso2l" path="res://character.tscn" id="1_ap1qx"]
 [ext_resource type="PackedScene" uid="uid://dvvx2c5r1u6ol" path="res://camera_control.tscn" id="2_cimrh"]
 [ext_resource type="Texture2D" uid="uid://wldek25dv62b" path="res://assets/tiles/cobble.png" id="3_l75lw"]
-[ext_resource type="Script" path="res://geometry.gd" id="4_fiyty"]
+[ext_resource type="Script" uid="uid://co0g7qglcutti" path="res://geometry.gd" id="4_fiyty"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_15e7h"]
 margin = 0.0
@@ -23,11 +23,11 @@ _surfaces = [{
 "aabb": AABB(0, 0, 0, 3, 3, 3),
 "format": 34359742465,
 "index_count": 36,
-"index_data": PackedByteArray(0, 0, 12, 0, 15, 0, 0, 0, 15, 0, 3, 0, 5, 0, 21, 0, 6, 0, 21, 0, 22, 0, 6, 0, 6, 0, 26, 0, 10, 0, 26, 0, 6, 0, 22, 0, 5, 0, 9, 0, 25, 0, 25, 0, 21, 0, 5, 0, 9, 0, 10, 0, 26, 0, 26, 0, 25, 0, 9, 0, 21, 0, 25, 0, 26, 0, 26, 0, 22, 0, 21, 0),
+"index_data": PackedByteArray("AAAMAA8AAAAPAAMABQAVAAYAFQAWAAYABgAaAAoAGgAGABYABQAJABkAGQAVAAUACQAKABoAGgAZAAkAFQAZABoAGgAWABUA"),
 "primitive": 3,
 "uv_scale": Vector4(0, 0, 0, 0),
 "vertex_count": 64,
-"vertex_data": PackedByteArray(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 128, 63, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 64, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 64, 64, 0, 0, 128, 63, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 128, 63, 0, 0, 0, 0, 0, 0, 128, 63, 0, 0, 128, 63, 0, 0, 0, 0, 0, 0, 0, 64, 0, 0, 128, 63, 0, 0, 0, 0, 0, 0, 64, 64, 0, 0, 0, 64, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 64, 0, 0, 0, 0, 0, 0, 128, 63, 0, 0, 0, 64, 0, 0, 0, 0, 0, 0, 0, 64, 0, 0, 0, 64, 0, 0, 0, 0, 0, 0, 64, 64, 0, 0, 64, 64, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 64, 64, 0, 0, 0, 0, 0, 0, 128, 63, 0, 0, 64, 64, 0, 0, 0, 0, 0, 0, 0, 64, 0, 0, 64, 64, 0, 0, 0, 0, 0, 0, 64, 64, 0, 0, 0, 0, 0, 0, 128, 63, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 128, 63, 0, 0, 128, 63, 0, 0, 0, 0, 0, 0, 128, 63, 0, 0, 0, 64, 0, 0, 0, 0, 0, 0, 128, 63, 0, 0, 64, 64, 0, 0, 128, 63, 0, 0, 128, 63, 0, 0, 0, 0, 0, 0, 128, 63, 0, 0, 128, 63, 0, 0, 128, 63, 0, 0, 128, 63, 0, 0, 128, 63, 0, 0, 0, 64, 0, 0, 128, 63, 0, 0, 128, 63, 0, 0, 64, 64, 0, 0, 0, 64, 0, 0, 128, 63, 0, 0, 0, 0, 0, 0, 0, 64, 0, 0, 128, 63, 0, 0, 128, 63, 0, 0, 0, 64, 0, 0, 128, 63, 0, 0, 0, 64, 0, 0, 0, 64, 0, 0, 128, 63, 0, 0, 64, 64, 0, 0, 64, 64, 0, 0, 128, 63, 0, 0, 0, 0, 0, 0, 64, 64, 0, 0, 128, 63, 0, 0, 128, 63, 0, 0, 64, 64, 0, 0, 128, 63, 0, 0, 0, 64, 0, 0, 64, 64, 0, 0, 128, 63, 0, 0, 64, 64, 0, 0, 0, 0, 0, 0, 0, 64, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 64, 0, 0, 128, 63, 0, 0, 0, 0, 0, 0, 0, 64, 0, 0, 0, 64, 0, 0, 0, 0, 0, 0, 0, 64, 0, 0, 64, 64, 0, 0, 128, 63, 0, 0, 0, 64, 0, 0, 0, 0, 0, 0, 128, 63, 0, 0, 0, 64, 0, 0, 128, 63, 0, 0, 128, 63, 0, 0, 0, 64, 0, 0, 0, 64, 0, 0, 128, 63, 0, 0, 0, 64, 0, 0, 64, 64, 0, 0, 0, 64, 0, 0, 0, 64, 0, 0, 0, 0, 0, 0, 0, 64, 0, 0, 0, 64, 0, 0, 128, 63, 0, 0, 0, 64, 0, 0, 0, 64, 0, 0, 0, 64, 0, 0, 0, 64, 0, 0, 0, 64, 0, 0, 64, 64, 0, 0, 64, 64, 0, 0, 0, 64, 0, 0, 0, 0, 0, 0, 64, 64, 0, 0, 0, 64, 0, 0, 128, 63, 0, 0, 64, 64, 0, 0, 0, 64, 0, 0, 0, 64, 0, 0, 64, 64, 0, 0, 0, 64, 0, 0, 64, 64, 0, 0, 0, 0, 0, 0, 64, 64, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 64, 64, 0, 0, 128, 63, 0, 0, 0, 0, 0, 0, 64, 64, 0, 0, 0, 64, 0, 0, 0, 0, 0, 0, 64, 64, 0, 0, 64, 64, 0, 0, 128, 63, 0, 0, 64, 64, 0, 0, 0, 0, 0, 0, 128, 63, 0, 0, 64, 64, 0, 0, 128, 63, 0, 0, 128, 63, 0, 0, 64, 64, 0, 0, 0, 64, 0, 0, 128, 63, 0, 0, 64, 64, 0, 0, 64, 64, 0, 0, 0, 64, 0, 0, 64, 64, 0, 0, 0, 0, 0, 0, 0, 64, 0, 0, 64, 64, 0, 0, 128, 63, 0, 0, 0, 64, 0, 0, 64, 64, 0, 0, 0, 64, 0, 0, 0, 64, 0, 0, 64, 64, 0, 0, 64, 64, 0, 0, 64, 64, 0, 0, 64, 64, 0, 0, 0, 0, 0, 0, 64, 64, 0, 0, 64, 64, 0, 0, 128, 63, 0, 0, 64, 64, 0, 0, 64, 64, 0, 0, 0, 64, 0, 0, 64, 64, 0, 0, 64, 64, 0, 0, 64, 64)
+"vertex_data": PackedByteArray("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAIA/AAAAAAAAAAAAAABAAAAAAAAAAAAAAEBAAACAPwAAAAAAAAAAAACAPwAAAAAAAIA/AACAPwAAAAAAAABAAACAPwAAAAAAAEBAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAIA/AAAAQAAAAAAAAABAAAAAQAAAAAAAAEBAAABAQAAAAAAAAAAAAABAQAAAAAAAAIA/AABAQAAAAAAAAABAAABAQAAAAAAAAEBAAAAAAAAAgD8AAAAAAAAAAAAAgD8AAIA/AAAAAAAAgD8AAABAAAAAAAAAgD8AAEBAAACAPwAAgD8AAAAAAACAPwAAgD8AAIA/AACAPwAAgD8AAABAAACAPwAAgD8AAEBAAAAAQAAAgD8AAAAAAAAAQAAAgD8AAIA/AAAAQAAAgD8AAABAAAAAQAAAgD8AAEBAAABAQAAAgD8AAAAAAABAQAAAgD8AAIA/AABAQAAAgD8AAABAAABAQAAAgD8AAEBAAAAAAAAAAEAAAAAAAAAAAAAAAEAAAIA/AAAAAAAAAEAAAABAAAAAAAAAAEAAAEBAAACAPwAAAEAAAAAAAACAPwAAAEAAAIA/AACAPwAAAEAAAABAAACAPwAAAEAAAEBAAAAAQAAAAEAAAAAAAAAAQAAAAEAAAIA/AAAAQAAAAEAAAABAAAAAQAAAAEAAAEBAAABAQAAAAEAAAAAAAABAQAAAAEAAAIA/AABAQAAAAEAAAABAAABAQAAAAEAAAEBAAAAAAAAAQEAAAAAAAAAAAAAAQEAAAIA/AAAAAAAAQEAAAABAAAAAAAAAQEAAAEBAAACAPwAAQEAAAAAAAACAPwAAQEAAAIA/AACAPwAAQEAAAABAAACAPwAAQEAAAEBAAAAAQAAAQEAAAAAAAAAAQAAAQEAAAIA/AAAAQAAAQEAAAABAAAAAQAAAQEAAAEBAAABAQAAAQEAAAAAAAABAQAAAQEAAAIA/AABAQAAAQEAAAABAAABAQAAAQEAAAEBA")
 }]
 
 [node name="scene" type="Node3D"]
@@ -37,7 +37,8 @@ script = ExtResource("1_5qc05")
 [node name="character" parent="." instance=ExtResource("1_ap1qx")]
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
-transform = Transform3D(-4.37114e-08, -0.5, 0.866025, 0, 0.866025, 0.5, -1, 2.18557e-08, -3.78552e-08, 4, 2, 0)
+transform = Transform3D(0.707107, 0.5, -0.5, 0, 0.707106, 0.707106, 0.707107, -0.5, 0.5, -4, 4, -4)
+shadow_enabled = true
 
 [node name="piso" type="StaticBody3D" parent="."]
 

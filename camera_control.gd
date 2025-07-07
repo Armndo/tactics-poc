@@ -3,18 +3,21 @@ class_name CameraControl
 
 const ROTATION_SPEED = 10
 const ZOOM_SPEED = 7.5
+const MOVE_SPEED = 10
 
-const DEFAULT_POS = 0
+const DEFAULT_POSITION = Vector3(0, 0, 20)
+const DEFAULT_ORIENTATION = 0
 const DEFAULT_X_ROT = -30
 const DEFAULT_Y_ROT = 45
-const DEFAULT_ZOOM = 3.0
-
+const DEFAULT_ZOOM = 4.0
 
 const CHANGE_X_ROT = 50
 const CHANGE_Y_ROT = 45
 const CHANGE_ZOOM = 1
+const CHANGE_POS = .075
 
-var pos = DEFAULT_POS
+var pos = DEFAULT_POSITION
+var orientation = DEFAULT_ORIENTATION
 var x_rot = DEFAULT_X_ROT
 var y_rot = DEFAULT_Y_ROT
 var zoom = DEFAULT_ZOOM
@@ -36,7 +39,7 @@ func isZooming():
 	return camera.size != zoom;
 	
 func isMoving():
-	return false
+	return camera.transform.origin != pos
 
 func rotateCamera(delta):
 	var currentRotation = $pivot.get_rotation()
@@ -53,45 +56,43 @@ func zoomCamera(delta):
 	camera.size = lerp(camera.size, zoom, ZOOM_SPEED*delta)
 	
 func moveCamera(delta):
-	pass
+	var target_position = Vector3(pos.x, pos.y, 20)
+	camera.transform.origin = camera.transform.origin.lerp(target_position, MOVE_SPEED*delta)
 
-func controlCamera(direction, dir):
-	match direction:
+func controlCamera(rotate, move):
+	match rotate:
 		1:
 			print("left rotation")
-			if pos == DEFAULT_POS: # initial position
-				pos += 1
+			if orientation == DEFAULT_ORIENTATION: # initial position
+				orientation += 1
 				y_rot += CHANGE_Y_ROT
 				x_rot -= CHANGE_X_ROT
-			elif pos > DEFAULT_POS: # overflow
+			elif orientation > DEFAULT_ORIENTATION: # overflow
 				pass
 			else:
-				pos = DEFAULT_POS
+				orientation = DEFAULT_ORIENTATION
 				y_rot = DEFAULT_Y_ROT
 				x_rot = DEFAULT_X_ROT
 		-1:
 			print("right rotation")
-			if pos == DEFAULT_POS:
-				pos -= 1
+			if orientation == DEFAULT_ORIENTATION:
+				orientation -= 1
 				y_rot -= CHANGE_Y_ROT
 				x_rot -= CHANGE_X_ROT
-			elif pos < DEFAULT_POS:
+			elif orientation < DEFAULT_ORIENTATION:
 				pass
 			else:
-				pos = DEFAULT_POS
+				orientation = DEFAULT_ORIENTATION
 				y_rot = DEFAULT_Y_ROT
 				x_rot = DEFAULT_X_ROT
 
-	
-	match dir:
+	match move:
 		1:
 			print("zoom in")
-			if zoom == DEFAULT_ZOOM: # initial position
+			if zoom + CHANGE_ZOOM == DEFAULT_ZOOM: # overflow
 				pass
-			elif zoom < DEFAULT_ZOOM: # overflow
+			elif zoom >= DEFAULT_ZOOM - 1 : # initial position
 				zoom -= CHANGE_ZOOM
-			else:
-				zoom = DEFAULT_ZOOM
 		-1:
 			print("zoom out")
 			if zoom == DEFAULT_ZOOM: # initial position
@@ -100,7 +101,23 @@ func controlCamera(direction, dir):
 				pass
 			else:
 				zoom = DEFAULT_ZOOM
-	
+
+func controlCamera2(y, x):
+	match y:
+		1:
+			print("y+")
+			pos += Vector3(0, CHANGE_POS, 0)
+		-1:
+			print("y-")
+			pos += Vector3(0, -CHANGE_POS, 0)
+
+	match x:
+		1:
+			print("x+")
+			pos += Vector3(CHANGE_POS, 0, 0)
+		-1:
+			print("x-")
+			pos += Vector3(-CHANGE_POS, 0, 0)
 
 func _process(delta):
 	if Input.is_action_pressed("x-button"):
@@ -112,12 +129,22 @@ func _process(delta):
 			controlCamera(0, 1)
 		elif Input.is_action_just_pressed("d-down"):
 			controlCamera(0, -1)
+	else:
+		if Input.is_action_pressed("d-up"):
+			controlCamera2(1, 0)
+		if Input.is_action_pressed("d-down"):
+			controlCamera2(-1, 0)
+		if Input.is_action_pressed("d-left"):
+			controlCamera2(0, -1)
+		if Input.is_action_pressed("d-right"):
+			controlCamera2(0, 1)
 	
 	if Input.is_action_just_pressed("start"):
-		pos = DEFAULT_POS
+		orientation = DEFAULT_ORIENTATION
 		y_rot = DEFAULT_Y_ROT
 		x_rot = DEFAULT_X_ROT
 		zoom = DEFAULT_ZOOM
+		pos = DEFAULT_POSITION
 		
 	if isRotating():
 		rotateCamera(delta)

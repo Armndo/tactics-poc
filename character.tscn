@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://bsn1j6j4vso2l"]
 
-[ext_resource type="Script" path="res://character.gd" id="1_c8vep"]
+[ext_resource type="Script" uid="uid://dbado0ih6222v" path="res://character.gd" id="1_c8vep"]
 [ext_resource type="Texture2D" uid="uid://cix4jyjjkjf13" path="res://assets/textures/placeholder.png" id="2_c5f7t"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_u0yi5"]
