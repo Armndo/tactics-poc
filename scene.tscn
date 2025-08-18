@@ -3,20 +3,21 @@
 [ext_resource type="Script" uid="uid://cbnd7rr38ngp4" path="res://scene.gd" id="1_5qc05"]
 [ext_resource type="PackedScene" uid="uid://bsn1j6j4vso2l" path="res://character.tscn" id="1_ap1qx"]
 [ext_resource type="PackedScene" uid="uid://dvvx2c5r1u6ol" path="res://camera_control.tscn" id="2_cimrh"]
-[ext_resource type="Texture2D" uid="uid://wldek25dv62b" path="res://assets/tiles/cobble.png" id="3_l75lw"]
+[ext_resource type="Texture2D" uid="uid://d3103ust7vd0f" path="res://assets/tiles/test_tile.png" id="3_m7jmp"]
 [ext_resource type="Script" uid="uid://co0g7qglcutti" path="res://geometry.gd" id="4_fiyty"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_15e7h"]
 margin = 0.0
-size = Vector3(4, 0.1, 4)
+size = Vector3(5, 0.1, 5)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kylyh"]
-albedo_texture = ExtResource("3_l75lw")
-uv1_scale = Vector3(32, 16, 8)
+albedo_texture = ExtResource("3_m7jmp")
+uv1_scale = Vector3(60, 40, 20)
+texture_filter = 0
 
 [sub_resource type="BoxMesh" id="BoxMesh_12qn8"]
 material = SubResource("StandardMaterial3D_kylyh")
-size = Vector3(4, 0.1, 4)
+size = Vector3(5, 0.1, 5)
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_t6nmm"]
 _surfaces = [{
@@ -31,30 +32,30 @@ _surfaces = [{
 }]
 
 [node name="scene" type="Node3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.392262, 0.448299, 0)
 script = ExtResource("1_5qc05")
 
 [node name="character" parent="." instance=ExtResource("1_ap1qx")]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0.125, 0.125, 0.125)
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
-transform = Transform3D(0.707107, 0.5, -0.5, 0, 0.707106, 0.707106, 0.707107, -0.5, 0.5, -4, 4, -4)
+transform = Transform3D(-4.37114e-08, -0.707107, 0.707107, 0, 0.707107, 0.707107, -1, 3.09086e-08, -3.09086e-08, 20, 20, 0)
 shadow_enabled = true
+shadow_bias = 0.0
+shadow_blur = 0.0
 
 [node name="piso" type="StaticBody3D" parent="."]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="piso"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.05, 0)
 shape = SubResource("BoxShape3D_15e7h")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="piso"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.05, 0)
 mesh = SubResource("BoxMesh_12qn8")
 skeleton = NodePath("../..")
 
 [node name="cameraControl" parent="." instance=ExtResource("2_cimrh")]
 
 [node name="geometry" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 2, 2)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 5, 5)
 visible = false
 mesh = SubResource("ArrayMesh_t6nmm")
 script = ExtResource("4_fiyty")

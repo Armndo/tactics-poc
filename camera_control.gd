@@ -14,7 +14,7 @@ const DEFAULT_ZOOM = 4.0
 const CHANGE_X_ROT = 50
 const CHANGE_Y_ROT = 45
 const CHANGE_ZOOM = 1
-const CHANGE_POS = .075
+const CHANGE_POS = .05
 
 var pos = DEFAULT_POSITION
 var orientation = DEFAULT_ORIENTATION
@@ -105,18 +105,18 @@ func controlCamera(rotate, move):
 func controlCamera2(y, x):
 	match y:
 		1:
-			print("y+")
+			#print("y+")
 			pos += Vector3(0, CHANGE_POS, 0)
 		-1:
-			print("y-")
+			#print("y-")
 			pos += Vector3(0, -CHANGE_POS, 0)
 
 	match x:
 		1:
-			print("x+")
+			#print("x+")
 			pos += Vector3(CHANGE_POS, 0, 0)
 		-1:
-			print("x-")
+			#print("x-")
 			pos += Vector3(-CHANGE_POS, 0, 0)
 
 func _process(delta):

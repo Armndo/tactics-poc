@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://d0vwt8jlllktg"]
+
+[ext_resource type="Script" uid="uid://cp3mu8dbneev2" path="res://sprites.gd" id="1_inbnb"]
+[ext_resource type="SpriteFrames" uid="uid://ckk3w270vss1t" path="res://assets/frames/placeholder.tres" id="2_inbnb"]
+
+[node name="sprites" type="Node2D"]
+script = ExtResource("1_inbnb")
+
+[node name="denam" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+texture_repeat = 1
+position = Vector2(-2, 2)
+sprite_frames = ExtResource("2_inbnb")
+animation = &"idle_walk"
+frame_progress = 0.189541

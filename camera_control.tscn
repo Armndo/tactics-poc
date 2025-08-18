@@ -21,3 +21,4 @@ script = ExtResource("3_sut3p")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 shape = SubResource("BoxShape3D_hpnet")
+disabled = true

@@ -1,0 +1,35 @@
+[gd_resource type="SpriteFrames" load_steps=5 format=3 uid="uid://bwxr6bjxwgc6a"]
+
+[ext_resource type="Texture2D" uid="uid://bf6s2xu0a1jdu" path="res://assets/textures/denam-spr.png" id="1_5563e"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5tw0p"]
+atlas = ExtResource("1_5563e")
+region = Rect2(0, 0, 20, 26)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ip2sb"]
+atlas = ExtResource("1_5563e")
+region = Rect2(20, 0, 20, 26)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7ssvv"]
+atlas = ExtResource("1_5563e")
+region = Rect2(40, 0, 20, 26)
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5tw0p")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ip2sb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5tw0p")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7ssvv")
+}],
+"loop": true,
+"name": &"idle_walk",
+"speed": 4.0
+}]
