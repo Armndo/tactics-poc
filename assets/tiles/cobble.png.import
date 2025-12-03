@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://wldek25dv62b"
 path.s3tc="res://.godot/imported/cobble.png-d51a398524b632ef99ece119c172182f.s3tc.ctex"
+path.etc2="res://.godot/imported/cobble.png-d51a398524b632ef99ece119c172182f.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://assets/tiles/cobble.png"
-dest_files=["res://.godot/imported/cobble.png-d51a398524b632ef99ece119c172182f.s3tc.ctex"]
+dest_files=["res://.godot/imported/cobble.png-d51a398524b632ef99ece119c172182f.s3tc.ctex", "res://.godot/imported/cobble.png-d51a398524b632ef99ece119c172182f.etc2.ctex"]
 
 [params]
 

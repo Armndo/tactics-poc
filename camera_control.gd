@@ -10,10 +10,12 @@ const DEFAULT_ORIENTATION = 0
 const DEFAULT_X_ROT = -30
 const DEFAULT_Y_ROT = 45
 const DEFAULT_ZOOM = 4.0
+const MIN_ZOOM = 2.0
+const MAX_ZOOM = 6.0
 
 const CHANGE_X_ROT = 50
 const CHANGE_Y_ROT = 45
-const CHANGE_ZOOM = 1
+const CHANGE_ZOOM = 1.0
 const CHANGE_POS = .05
 
 var pos = DEFAULT_POSITION
@@ -86,21 +88,28 @@ func controlCamera(rotate, move):
 				y_rot = DEFAULT_Y_ROT
 				x_rot = DEFAULT_X_ROT
 
+	print("before")
+	print("move: ", move, " zoom: ", zoom, " CHANGE_ZOOM: ", CHANGE_ZOOM, " MIN_ZOOM: ", MIN_ZOOM, " MAX_ZOOM: ", MAX_ZOOM)
+
 	match move:
 		1:
 			print("zoom in")
-			if zoom + CHANGE_ZOOM == DEFAULT_ZOOM: # overflow
+			if zoom - CHANGE_ZOOM < MIN_ZOOM: # overflow
 				pass
-			elif zoom >= DEFAULT_ZOOM - 1 : # initial position
+			elif zoom >= MIN_ZOOM - 1 : # initial position
 				zoom -= CHANGE_ZOOM
 		-1:
 			print("zoom out")
-			if zoom == DEFAULT_ZOOM: # initial position
-				zoom += CHANGE_ZOOM
-			elif zoom > DEFAULT_ZOOM: # overflow
+			if zoom + CHANGE_ZOOM > MAX_ZOOM: # initial position
 				pass
-			else:
-				zoom = DEFAULT_ZOOM
+			elif zoom <= MAX_ZOOM + 1: # overflow
+				zoom += CHANGE_ZOOM
+			#else:
+			#	zoom = DEFAULT_ZOOM
+				
+				
+	print("after")
+	print("move: ", move, " zoom: ", zoom, " CHANGE_ZOOM: ", CHANGE_ZOOM, " MIN_ZOOM: ", MIN_ZOOM, " MAX_ZOOM: ", MAX_ZOOM)
 
 func controlCamera2(y, x):
 	match y:

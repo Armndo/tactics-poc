@@ -1,16 +1,13 @@
-[gd_scene load_steps=7 format=3 uid="uid://bsn1j6j4vso2l"]
+[gd_scene load_steps=6 format=3 uid="uid://briog22xn2xaa"]
 
-[ext_resource type="Script" uid="uid://dbado0ih6222v" path="res://character.gd" id="1_c8vep"]
-[ext_resource type="Texture2D" uid="uid://d1t7vj3vv7nj4" path="res://assets/textures/cursor4.png" id="2_pjt0s"]
-[ext_resource type="SpriteFrames" uid="uid://ckk3w270vss1t" path="res://assets/frames/placeholder.tres" id="3_wa5vi"]
+[ext_resource type="Texture2D" uid="uid://d1t7vj3vv7nj4" path="res://assets/textures/cursor4.png" id="2_n2u5w"]
+[ext_resource type="SpriteFrames" uid="uid://ckk3w270vss1t" path="res://assets/frames/placeholder.tres" id="3_xbg1s"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_u0yi5"]
-margin = 0.01
-size = Vector3(0.99, 1, 0.99)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_pjt0s"]
 transparency = 1
-albedo_texture = ExtResource("2_pjt0s")
+albedo_texture = ExtResource("2_n2u5w")
 texture_filter = 0
 texture_repeat = false
 
@@ -18,11 +15,11 @@ texture_repeat = false
 material = SubResource("StandardMaterial3D_pjt0s")
 size = Vector2(1, 1)
 
-[node name="character" type="CharacterBody3D"]
-script = ExtResource("1_c8vep")
+[node name="actor" type="CharacterBody3D"]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 shape = SubResource("BoxShape3D_u0yi5")
+disabled = true
 
 [node name="Cursor" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 0)
@@ -34,7 +31,7 @@ transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, 0, -0.062, 0)
 billboard = 1
 texture_filter = 0
 render_priority = 2
-sprite_frames = ExtResource("3_wa5vi")
+sprite_frames = ExtResource("3_xbg1s")
 animation = &"idle_walk"
 
 [node name="CharacterShadow" type="AnimatedSprite3D" parent="."]
@@ -44,5 +41,5 @@ alpha_cut = 2
 alpha_antialiasing_mode = 2
 texture_filter = 0
 render_priority = 1
-sprite_frames = ExtResource("3_wa5vi")
+sprite_frames = ExtResource("3_xbg1s")
 animation = &"idle_walk"

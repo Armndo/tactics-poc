@@ -35,7 +35,7 @@ func _ready():
 	#position = Vector3(0, 1, 0)
 
 func _physics_process(delta):
-	print(spriteShadow.position)
+	#print(spriteShadow.position)
 	if camera.orientation < 0:
 		#print("a")
 		zpos = -.25
@@ -89,7 +89,7 @@ func _physics_process(delta):
 		velocity.y = 0
 
 	if Input.is_action_just_pressed("select"):
-		position = Vector3(.125, .125, .125)
+		position = Vector3(.125, 0.176, .125)
 		velocity.y = 0
 		velocity.x = 0
 		velocity.z = 0		
