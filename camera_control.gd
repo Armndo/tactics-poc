@@ -5,18 +5,18 @@ const ROTATION_SPEED = 10
 const ZOOM_SPEED = 7.5
 const MOVE_SPEED = 10
 
-const DEFAULT_POSITION = Vector3(0, 0, 20)
+const DEFAULT_POSITION = Vector3(0, 0, 0)
 const DEFAULT_ORIENTATION = 0
 const DEFAULT_X_ROT = -30
 const DEFAULT_Y_ROT = 45
-const DEFAULT_ZOOM = 4.0
-const MIN_ZOOM = 2.0
-const MAX_ZOOM = 6.0
+const DEFAULT_ZOOM = 15.0
+const MIN_ZOOM = 5.0
+const MAX_ZOOM = 25.0
 
 const CHANGE_X_ROT = 50
 const CHANGE_Y_ROT = 45
-const CHANGE_ZOOM = 1.0
-const CHANGE_POS = .05
+const CHANGE_ZOOM = 5.0
+const CHANGE_POS = .25
 
 var pos = DEFAULT_POSITION
 var orientation = DEFAULT_ORIENTATION

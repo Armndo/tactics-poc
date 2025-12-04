@@ -7,7 +7,7 @@ class_name Character
 const SPEED = 2.5
 const JUMP_VELOCITY = 3.0
 const CURSOR_FRAME_RATE = 6
-const MOVE_SPEED = 15
+const MOVE_SPEED = 60
 const DEFAULT_SPRITE_YPOS = -0.0625
 const DEFAULT_SPRITE_YROT = PI/4
 const ROTATION_SPEED = 10
@@ -89,7 +89,7 @@ func _physics_process(delta):
 		velocity.y = 0
 
 	if Input.is_action_just_pressed("select"):
-		position = Vector3(.125, 0.176, .125)
+		position = Vector3(.5, 1, .5)
 		velocity.y = 0
 		velocity.x = 0
 		velocity.z = 0		

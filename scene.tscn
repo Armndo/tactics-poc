@@ -8,7 +8,7 @@
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_15e7h"]
 margin = 0.0
-size = Vector3(5, 0.1, 5)
+size = Vector3(40, 1, 40)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kylyh"]
 albedo_texture = ExtResource("3_m7jmp")
@@ -17,7 +17,7 @@ texture_filter = 0
 
 [sub_resource type="BoxMesh" id="BoxMesh_12qn8"]
 material = SubResource("StandardMaterial3D_kylyh")
-size = Vector3(5, 0.1, 5)
+size = Vector3(40, 1, 40)
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_t6nmm"]
 _surfaces = [{
@@ -35,7 +35,7 @@ _surfaces = [{
 script = ExtResource("1_5qc05")
 
 [node name="character" parent="." instance=ExtResource("1_ap1qx")]
-transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0.125, 0.176, 0.125)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 1, 0.5)
 
 [node name="character2" parent="." instance=ExtResource("1_ap1qx")]
 transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0.375, 0.176, 0.125)
